@@ -1,0 +1,117 @@
+<view class="register">
+<view class="classname">
+ <text>认证状态：</text>
+ <text wx:if="{{audit==0}}">未提交审核</text>
+ <text wx:elif="{{audit==1}}" style="color:red;">审核中</text>
+ <text wx:elif="{{audit==2}}" style="color:green;">已认证</text>
+ <text wx:elif="{{audit==3}}" style="color:red;">未通过</text>
+ <view>(理由/原因: )</view>
+</view>
+    <view class="user">
+        <text style="color:#000">姓名：</text>
+        <input class="in" data-value="{{truename}}" name="truename"  bindblur="bindKeyname" value="{{truename!=null?truename:''}}"/>
+    </view>
+     <view class="user">
+        <text style="color:#000">律师所：</text>
+        <input class="in" data-value="{{shop_name}}" name="shop_name"  bindinput="bindshop" value="{{shop_name!=null?shop_name:''}}"/>
+    </view>
+     <view class="user">
+        <text style="color:#000">地址：</text>
+        <input class="in" data-value="{{dizhi}}" name="dizhi"  bindinput="bindaddress" value="{{dizhi!=null?dizhi:''}}"/>
+    </view>
+     <view class="user">
+        <text style="color:#000">服务项目：</text>
+        <input class="in" data-value="{{service}}" name="service"  bindinput="bindservice" value="{{service!=null?service:''}}" placeholder="多个项目请用'/'分隔"/>
+    </view>
+    <view class="user">
+        <text style="color:#000">传真：</text>
+        <input class="in" data-value="{{cz}}" name="cz"  bindinput="bindcz" value="{{cz!=null?cz:''}}"/>
+    </view>
+<!--手机-->
+    <!-- <view class="user">
+        <text style="color:#000">手机：+86</text>
+        <input class="in" data-value="{{tel}}" name="tel"  bindblur="bindTelInput" value="{{tel}}"/>
+    </view> -->
+ <!--验证码   -->
+    <!--<view class="yz">
+        <text style="color:#000">验证码：</text>
+        <input  class="sim" data-value="{{yz}}" name="yzm" bindinput="bindyz" value="{{yz}}"/>
+    </view>-->
+ <!--类型选择   -->
+<!-- <view class="jj">
+  <view class="section" wx:if="{{ptype==2}}">
+     
+      <view class="picker">
+          类型： <text class="xuan" style="color:orange;">认证企业</text> 
+      </view>
+  </view>
+  <view class="section" wx:else>
+ 
+      <picker bindchange="bindPickerChange"  value="{{index}}" range="{{array}}">
+          <view class="picker">
+            类型选择： <text class="xuan" >{{array[index]}}</text> 
+          </view>
+      </picker>
+  </view>
+</view> -->
+    <!--导游证号-->
+<!-- <view class="kk">
+        <text style="color:#000">营业执照号：</text>
+        <input class="you" data-value="{{blNumber}}" data-id="dao" name='bl_number' bindblur='numberInputEvent' value="{{blNumber}}"/>
+    </view> -->
+    <view class="textarea_big" style="border-bottom:1px solid #eee;">
+      <view class="big_text"><text>律师简介:</text></view>
+      <view class="section" style="height:150rpx;width:70%;"> 
+        <textarea name="digest" maxlength="-1" style="height:150rpx;width:100%; line-height:20rpx;" value="{{digest}}"  data-value="{{digest}}" bindinput="binddigest"/>
+      </view> 
+    </view>
+    <view class="textarea_big">
+      <view class="big_text"><text>执业经验:</text></view>
+      <view class="section" style="height:150rpx;width:70%;"> 
+        <textarea name="zyjy" maxlength="-1" style="height:150rpx;width:100%; line-height:20rpx;" value="{{zyjy}}"  data-value="{{zyjy}}" bindinput="bindzyjy"/>
+      </view> 
+    </view>
+    <p class='ru'>ps:如果您已认证，提交将会重新审核</p>
+<!--注册-->
+<!--上传-->
+<view class="ii">( 律师头像：请上传头像）</view>
+<view class="page-body-info">
+<!--one-->
+    <view class="kg">
+  <block wx:if="{{photo_ls}}">
+   <view class="image-plus image-plus-nb" bindtap="chooseImage2">
+          <image src="{{photo_ls}}" class="image" mode="aspectFit"></image>
+          </view>
+  </block>
+ <block wx:else>
+   <view class="image-plus image-plus-nb" bindtap="chooseImage2">
+      <image src="../../image/sssss.png" style="width:100%;height:100%"></image>
+   </view>
+  </block>
+      </view>
+</view>
+<view class="ii">( 律师认证请上传：律师执业证）</view>
+<view class="page-body-info">
+<!--one-->
+    <view class="kg">
+  <block wx:if="{{imageSrc}}">
+   <view class="image-plus image-plus-nb" bindtap="chooseImage">
+          <image src="{{imageSrc}}" class="image" mode="aspectFit"></image>
+          </view>
+  </block>
+ <block wx:else>
+   <view class="image-plus image-plus-nb" bindtap="chooseImage">
+      <image src="../../image/sssss.png" style="width:100%;height:100%"></image>
+   </view>
+  </block>
+      </view>
+</view>
+
+<view class="but">
+    <button bindtap="formDataCommit" disabled="{{disabled}}" style="color:#000">      提交认证     </button>
+</view>
+<!--
+<view class="alert {{error}}">
+        <text>用户名或密码错误</text>
+    </view>-->
+</view>

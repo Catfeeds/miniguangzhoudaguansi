@@ -1,0 +1,85 @@
+.intro_top image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: -35rpx;
+}
+.intro_top {
+  text-align: center;
+  border-bottom: 1px solid #D2D2D2;
+}
+.site {
+  color: #ABABAB;
+  margin-left: 20rpx;
+}
+page {
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+  background: #EDEDED;
+  height: 100%;
+}
+.name {
+  font-size: 30rpx;
+}
+.intro_Past {
+  color: #ABABAB;
+  margin-top: 10rpx;
+}
+.intro {
+  background: #fff;
+  height: 100%;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  box-shadow: 0px 1px 5px 2px #ccc;
+}
+.big {
+  height: 92%;
+  padding: 45rpx 20rpx 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.intro_name {
+  margin-top: 10rpx;
+}
+.phone image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle; 
+  margin-top: -5rpx;
+  margin-right: 10rpx;
+}
+.phone {
+  margin-top: 25rpx;
+  margin-bottom: 30rpx;
+}
+.user_intro {
+  color: #ABABAB;
+  text-align: center;
+  margin-top: 20rpx;
+}
+ .intro_centre {
+  margin-top: 20rpx;
+} 
+.bottom_nav {
+  display: flex;
+  height: 8%;
+  align-items: center;
+  font-size: 32rpx;
+  border-top: 1px solid #D2D2D2;
+  background: #fff;
+  box-sizing: border-box;
+}
+.nav_left {
+  width: 30%;
+  text-align: center;
+}
+.nav_right {
+  width: 70%;
+  height: 100%;
+  background: #336598;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.nav_right text {
+  margin: 0 auto;
+}

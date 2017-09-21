@@ -1,0 +1,37 @@
+<view class="submit">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入详细的咨询内容，方便律师为您解答" name="content"/>
+    <view class="button">
+      <button form-type="submit"> 提交咨询 </button>
+    </view>
+  </form>
+  <view class="shouye" bindtap="return">
+    <button>返回首页</button>
+  </view>
+</view>
+<view class="submit_bottom">
+  <view class="submit_left">
+    <image src="../../image/07.png"></image>
+    <view>免费</view>
+    <text>在线咨询免费咨询</text>
+  </view>
+  <view class="submit_left">
+    <image src="../../image/08.png"></image>
+    <view>快速</view>
+    <text>10分钟快速回复 </text>
+  </view>
+  <view class="submit_left">
+    <image src="../../image/09.png"></image>
+    <view>专业</view>
+    <text>认证律师专业可靠</text>
+  </view>
+</view>
+
+
+
+<!--logo  -->
+<!-- <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
+</view> -->

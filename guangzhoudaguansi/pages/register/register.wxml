@@ -1,0 +1,24 @@
+<form bindsubmit="bindFormSubmit">
+    <!-- <view class="register">
+      <text>姓名</text><input type="text" placeholder="请输入您的姓名"/>
+    </view> -->
+    <view class="register">
+      <text>手机号</text><input type="number" focus placeholder="请输入您的手机号 " bindinput="phone" name="phone"/>
+    </view>
+    <view class="register">
+      <text>验证码</text><input type="number" name="yzcode" placeholder="请输入您的验证码"/>
+      <button style="background:{{color}}" disabled="{{disabled}}" bindtap="acquire">{{buttonValue}}<text wx:if="{{time}}">({{second}}s)</text></button>
+    </view>
+    <view class="button">
+      <button style="background:{{color}}" form-type="submit"> 确认提交 </button>
+    </view>
+</form>
+
+
+
+<!--logo  -->
+<!-- <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
+</view> -->

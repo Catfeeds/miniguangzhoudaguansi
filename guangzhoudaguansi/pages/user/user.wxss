@@ -1,0 +1,39 @@
+page {
+  background: #EDEDED;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+.user {
+  height: 290rpx;
+  background: #336598;
+  text-align: center;
+  color: #fff;
+}
+.user image {
+  width: 145rpx;
+  height:145rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+}
+.message image {
+  width: 35rpx;
+  height: 35rpx;
+}
+.message  {
+  height: 100rpx;
+  background: #fff;
+}
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.message_left image {
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.kong {
+  height: 20rpx;
+}

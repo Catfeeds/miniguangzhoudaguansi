@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="__PUBLIC__/ht/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/action.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/xheditor/xheditor-1.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/xheditor/xheditor_lang/zh-cn.js"></script>
+<script>
+if(<?= $_SESSION['appkey'];?> == 1607 && <?= $id;?> <= 0){
+	$(function(){
+		var id = $('#city').val();
+		aaa_china_city_ajax(id,'quyu');
+	})
+}
+</script>
+</head>
+<body>
+
+<div class="aaa_pts_show_1">【 案例管理 】</div>
+
+<div class="aaa_pts_show_2">
+    
+
+    <div class="aaa_pts_3">
+      <form action="{:U('add')}" method="post" onsubmit="return ac_from();" enctype="multipart/form-data">
+      <ul class="aaa_pts_5">
+         <li>
+            <div class="d1">案例标题:</div>
+            <div>
+              <input class="inp_1" name="title" id="title" value="{$case.title}"/>
+            </div>
+         </li>
+         <li>
+            <div class="d1">案例内容:</div>
+            <div>
+              <textarea class="inp_1 inp_2" name="content" id="content"/>{$case.content}</textarea>
+            </div>
+         </li>
+         <li>
+            <div class="d1">案例来源:</div>
+            <div>
+              <input class="inp_1" name="source" id="source" value="{$case.source}"/>
+            </div>
+         </li>
+         <li>
+            <div class="d1">作者:</div>
+            <div>
+              <input class="inp_1" name="author" id="author" value="{$case.author}"/>
+            </div>
+         </li>
+         <li><input type="submit" name="submit" value="提交" class="aaa_pts_web_3" border="0">
+            <input type="hidden" name="id" value="{$case.id}">
+         </li>
+      </ul>
+      </form>
+         
+    </div>
+    
+</div>
+<script>
+function ac_from(){
+
+  var title=document.getElementById('title').value;
+  var content=document.getElementById('content').value;
+  var source=document.getElementById('source').value;
+  var author=document.getElementById('author').value;
+  
+  if(!title){
+	  alert('请填写案例标题！');
+	  return false;
+	} 
+
+   
+
+  if(!source){
+    alert('请填写案例来源！');
+    return false;
+  } 
+
+  if(!author){
+    alert('请填写作者姓名！');
+    return false;
+  }   
+  
+  
+}
+
+//初始化编辑器
+$('#content').xheditor({
+  skin:'nostyle' ,
+  upImgUrl:'{:U("Upload/xheditor")}'
+});
+
+
+</script>
+</body>
+</html>

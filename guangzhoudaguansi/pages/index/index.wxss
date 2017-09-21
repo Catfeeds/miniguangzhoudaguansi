@@ -1,0 +1,265 @@
+page {
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+}
+.page_head image{
+  width: 100%;
+  height: 100%;
+}
+.page_head {
+  position: relative;
+  font-size: 48rpx;
+  height: 430rpx;
+}
+.page_head_text {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  margin-top: -18%;
+}
+.page_head_text > text {
+  color: #BF052A;
+
+}
+.head_text {
+  margin-top: 40rpx;
+}
+.head_text {
+  padding: 30rpx 50rpx;
+  display: inline-block;
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10rpx;
+}
+.page_tap {
+  display: flex;
+  border: 1px solid #eee;
+  height: 80rpx;
+  font-size: 34rpx;
+}
+.page_tap > view {
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  line-height: 80rpx;
+}
+.active {
+  background: #336598;
+  color: #fff;
+  transition: 0.4s;
+}
+.hot_message image {
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 50%;
+  border: 1px solid #D5D5D5;
+}
+.hot_message {
+  width: 25%;
+  font-size: 26rpx;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+}
+.hot_information {
+  display: flex;
+  flex-wrap:wrap;
+  padding: 30rpx 20rpx;
+}
+.hot_message > view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  font-size: 20rpx;
+  padding: 0 15rpx;
+}
+/*空白  */
+.blank {
+  height: 20rpx;
+  background: #EDEDED;
+}
+/*推荐律师  */
+.recommend_nav {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  border-bottom: 1px solid #D2D2D2;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.recommend_nav image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-top: -3rpx;
+}
+.recommend_nav view text {
+  color: #929292;
+}
+.recommend_big {
+  display: flex;
+}
+.recommend_text text {
+  display: block;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.recommend_img image {
+  width: 140rpx;
+  height: 120rpx;
+}
+.recommend_img {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.recommend_big {
+  height: 160rpx;
+  border-bottom: 1px solid #D2D2D2;
+  font-size: 25rpx;
+}
+.recommend_text {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.color {
+  color: #929292;
+  margin-bottom: 10rpx;
+}
+.recommend_button button {
+  background: #52A3F5;
+  font-size: 28rpx;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.recommend_button {
+  position: absolute;
+  right: 20rpx;
+  margin-top: 30rpx;
+}
+/*法律咨询  */
+.counsel_title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.cunsel_tap {
+  display:flex;
+  height: 80rpx;
+  border-top: 1px solid #D2D2D2;
+  border-bottom: 1px solid #D2D2D2;
+}
+.cunsel_tap > view {
+  width:50%;
+  text-align: center;
+  height: 100%;
+  line-height: 80rpx;
+}
+.cunsel_tap_service {
+  border-right: 1px solid #d2d2d2;
+}
+.cunsel_color {
+  color:#52A3F4;
+}
+/*法律咨询-数据  */
+.service_big image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin: 20rpx;
+}
+.service_big {
+   display: flex; 
+  height: 130rpx;
+  border-bottom: 1px solid #d2d2d2;
+}
+.service_text text {
+  color: #696969;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.service_time {
+  color: #929292;
+}
+.service_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 28rpx;
+}
+.service_name {
+  font-size: 32rpx;
+}
+.service_time {
+  position: absolute;
+  right: 20rpx;
+  font-size: 28rpx;
+}
+/*分页  */
+.paging {
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+}
+.paging > view {
+  width: 50%;
+  text-align: center;
+}
+.up_paging {
+  border-right: 1px solid #d2d2d2;
+}
+/*发布  */
+.publish {
+  padding: 10rpx 0 30rpx 0;
+  width: 400rpx;
+  margin: 0 auto;
+}
+.publish button  {
+  background: #FE7273;
+}
+/*案例分析-数据  */
+.case_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+.case_text {
+  color: #6F6F6F;
+}
+.case_text text {
+  color: #1C1C1C;
+  font-weight: 500;
+}
+.case_row {
+  padding: 20rpx;
+  border-bottom: 15rpx solid #EDEDED;
+}
+.case_time text{
+  float: right;
+  margin-top:10rpx;
+  color: #919191;
+}
+.case_time {
+  width: 100%;
+  height: 40rpx;
+}
+.case_data {
+  height: 100%;
+  margin-bottom: 30rpx;
+}

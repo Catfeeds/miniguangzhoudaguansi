@@ -1,0 +1,59 @@
+.attorney_left {
+  height: 100%;
+  width: 180rpx;
+  background: #fff;
+}
+.attorney {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #EDEDED;
+}
+page {
+  height: 100%;
+  width: 100%;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+.attorney_left view {
+  width: 100%; 
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom: 1px solid #BFBFBF;
+}
+.attorney_color {
+  color: #336598;
+}
+ .border { 
+  width: 500rpx;
+  height: 1px;
+  background-image:linear-gradient(to left, #fff, #eee,#D4D4D4,#D4D4D4,#eee,#fff); 
+  position: absolute;
+  top: 37rpx;
+  left: 50%;
+  margin-left: -250rpx;
+} 
+.right_big {
+  background: #fff;
+  height: 180rpx;
+  width: 100%;
+  text-align: center;
+  position: relative; 
+  border-radius: 10rpx;
+  box-shadow: 2px 4px 4px #ccc;
+  margin-top: 55rpx; 
+}
+ .right_big image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-top: -30rpx;
+  position: relative;
+} 
+.attorney_right {
+  width:100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}

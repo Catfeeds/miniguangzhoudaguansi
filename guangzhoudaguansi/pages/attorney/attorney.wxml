@@ -1,0 +1,25 @@
+<view class="attorney">
+  <view class="attorney_left" bindtap="attorneyTap">
+    <view class="left_top {{tap == 0 ? 'attorney_color':''}}" id="0">律师介绍</view>
+    <view class="left_top {{tap == 1 ? 'attorney_color':''}}" id="1">金牌律师</view>
+  
+  </view>
+  <!--律师介绍 -->
+  <view class="attorney_right" wx:if="{{tap == 0}}">
+    <view class="right_big" wx:for="{{lslist}}" bindtap="intro" data-id="{{item.id}}">
+      <view class="border"></view> 
+      <image src="{{item.photo_x}}"></image> 
+      <view class="right_name">{{item.name}}</view>
+      <view class="right_centre">事务所：{{item.shop_name!=null?item.shop_name:''}}</view>
+    </view>
+  </view>
+  <!--金牌律师  -->
+  <view class="attorney_right"  wx:if="{{tap == 1}}">
+    <view class="right_big" wx:for="{{lslist}}" bindtap="intro" data-id="{{item.id}}">
+      <view class="border"></view> 
+      <image src="{{item.photo_x}}"></image> 
+      <view class="right_name">{{item.name}}</view>
+      <view class="right_centre">事务所：{{item.shop_name!=null?item.shop_name:''}}</view>
+    </view>
+  </view>
+</view>

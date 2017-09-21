@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/advisory/advisory",
+    "pages/advisoryDetails/advisoryDetails",
+    "pages/attorney/attorney",
+    "pages/intro/intro",
+    "pages/personal/personal",
+    "pages/submit/submit",
+    "pages/submit_service/submit_service",
+    "pages/reply/reply",
+    "pages/user/user",
+    "pages/myconsult/myconsult",
+    "pages/meconsult/meconsult",
+    "pages/register/register",
+    "pages/issue/issue",
+    "pages/synopsis/synopsis",
+    "pages/fudetail/fudetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#336598",
+    "navigationBarTitleText": "广州打官司",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#356596",
+    "borderStyle": "#C3C3C3",
+    "backgroundColor": "#fff",
+    "list": [
+     {
+      "selectedIconPath": "image/03.png",
+      "iconPath": "image/03-1.png",
+      "pagePath": "pages/index/index",
+      "backgrondColor": "#356596",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/attorney/attorney",
+      "selectedIconPath": "image/02-1.png",
+      "iconPath": "image/02.png",
+      "text": "金牌律师"
+    },
+    {
+      "pagePath": "pages/advisory/advisory",
+      "iconPath": "image/04-1.png",
+      "selectedIconPath": "image/04.png",
+      "text": "行业咨询"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "selectedIconPath": "image/01.png",
+      "iconPath": "image/01-1.png",
+      "text": "个人中心"
+    }
+    ]
+  }
+}

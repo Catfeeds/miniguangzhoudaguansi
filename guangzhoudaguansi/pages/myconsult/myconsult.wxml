@@ -1,0 +1,35 @@
+<scroll-view  class="reply" scroll-y style="width: 100%">
+  <view class="reply_top" wx:for="{{list}}">
+    <view class="reply_title">
+      咨询内容
+    </view>
+    <view class="reply_centre" bindtap="zdetail" data-id="{{item.id}}">
+      <view class="replay_text">
+        {{item.content}}
+      </view>
+      <view class="replay_time">
+       <text>发布时间：{{item.addtime}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <!--logo  -->
+<!-- <view style="text-align:center;margin-top:50rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
+</view> -->
+</scroll-view>  
+  
+<!--底部  -->
+<view class="bottom_nav">
+    <view class="nav_left" bindtap="shouye">回到首页</view>
+    <view bindtap="zixun" class="nav_right">
+      <text>免费咨询</text>
+    </view>
+</view>
+
+
+
+

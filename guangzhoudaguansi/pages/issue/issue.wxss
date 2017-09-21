@@ -1,0 +1,30 @@
+.submit textarea{
+  padding: 20rpx;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+.submit {
+  box-sizing: border-box;
+}
+page {
+  background: #EDEDED;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+.button button {
+  background: #336598;
+  color: #fff;
+}
+.button {
+  padding: 0 30rpx;
+  margin-top: 50rpx;
+}
+.shouye  {
+  padding: 30rpx;
+}
+.shouye button {
+  border: 1rpx solid #D2D2D2;
+}

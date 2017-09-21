@@ -1,0 +1,35 @@
+<view class="reply">
+  <view class="reply_top">
+    <view class="reply_title">
+      咨询内容
+    </view>
+    <view class="reply_centre">
+      <view class="replay_text">
+        {{intro.content}}
+      </view>
+      <view class="replay_time">
+       <text>发布时间：{{intro.addtime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="replay_bottom">
+    <view class="reply_title">
+      律师解答
+    </view>
+    <!--空  -->
+    
+    <view>
+    <!--律师解答  -->
+    <view class="answer">
+      <textarea maxlength="-1" bindinput="bindreply"  auto-height value="{{reply_content}}" placeholder="暂无解答，我来解答......" name="reply_content" data-value="{{reply_content}}"/>
+    </view>
+    </view>
+  </view>
+</view>
+  <!--底部  -->
+  <view class="bottom_nav">
+      <view class="nav_left" bindtap="shouye">回到首页</view>
+      <view bindtap="jieda" class="nav_right">
+        <text>提交解答</text>
+      </view>
+  </view>

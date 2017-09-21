@@ -1,0 +1,33 @@
+<view class="big">
+  <view class="intro">
+    <view class="intro_top">
+      <image src="{{intro.photo_x}}"></image>
+      <view class="intro_name">
+        <text class="name">{{intro.name}}</text>
+        <text class="site">{{intro.dizhi!=null?intro.dizhi:''}}</text>
+      </view>
+      <view class="intro_Past">
+        <text>{{intro.service!=null?intro.service:''}}</text>
+      </view>
+      <view class="phone" bindtap="dial">
+        <image src="../../image/06.png"></image>
+        <text>{{intro.tel}}</text>
+      </view>
+    </view>
+    <view class="intro_bottom">
+      <view class="user_intro">
+        律师简介
+      </view>
+      <view class="intro_centre">
+        {{intro.digest!=null?intro.digest:''}}
+      </view>
+    </view>
+  </view>
+</view>
+  <!--底部  -->
+  <view class="bottom_nav">
+      <view class="nav_left" bindtap="shouye">回到首页</view>
+      <navigator url="../submit/submit?ls_id={{intro.id}}" class="nav_right">
+        <text>免费咨询</text>
+      </navigator>
+  </view>

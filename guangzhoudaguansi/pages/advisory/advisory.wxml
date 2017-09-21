@@ -1,0 +1,22 @@
+
+  <!--案例分析-数据  -->
+  <view class="case_data">
+    <navigator url="../advisoryDetails/advisoryDetails?id={{item.id}}"  wx:for="{{list}}">
+      <view class="case_row">
+        <view class="case_text">
+          <text>【经典案例】</text>{{item.title}}
+        </view>
+        <view class="case_time">
+          <text>{{item.addtime}}</text>
+        </view>
+      </view>
+    </navigator>
+  <!--case_data end  -->
+  </view>
+
+<!--logo  -->
+<!-- <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
+</view> -->

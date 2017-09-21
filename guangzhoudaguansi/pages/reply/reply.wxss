@@ -1,0 +1,84 @@
+.reply_title {
+  height: 80rpx;
+  border-bottom: 1px solid #d2d2d2;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  color: #A3A3A3;
+}
+page {
+  font-size: 32rpx;
+  font-family: "微软雅黑";
+  height: 100%;
+}
+.replay_time{
+  color: #A3A3A3;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  height: 40rpx;
+}
+.reply_centre  {
+  padding:  20rpx;
+  border-bottom: 20rpx solid #EDEDED;
+}
+.replay_time text {
+  margin-left: 10rpx;
+  float: right;
+}
+.replay_text {
+  font-size: 30rpx;
+}
+.reply {
+  height: 92%;
+}
+.empty  {
+  padding: 100rpx 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #A3A3A3;
+}
+
+
+
+
+
+
+
+
+
+/*底部  */
+.bottom_nav {
+  display: flex;
+  height: 8%;
+  align-items: center;
+  font-size: 32rpx;
+  border-top: 1px solid #D2D2D2;
+  background: #fff;
+  box-sizing: border-box;
+}
+.nav_left {
+  width: 30%;
+  text-align: center;
+}
+.nav_right {
+  width: 70%;
+  height: 100%;
+  background: #336598;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.nav_right text {
+  margin: 0 auto;
+}
+.answer textarea {
+  border: 1px solid #D2D2D2;
+  min-height: 465rpx;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.answer {
+  padding: 20rpx;
+  box-sizing: border-box;
+}

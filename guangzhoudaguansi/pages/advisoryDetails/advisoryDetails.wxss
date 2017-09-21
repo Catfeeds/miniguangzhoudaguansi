@@ -1,0 +1,15 @@
+page {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+.head_bottom {
+  font-size: 22rpx;
+  color: #929292;
+}
+.head {
+  padding: 30rpx 0 20rpx 40rpx;
+  border-bottom: 1px solid #D2D2D2;
+}
+.title {
+  margin-bottom: 10rpx;
+}

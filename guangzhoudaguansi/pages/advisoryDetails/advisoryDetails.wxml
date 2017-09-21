@@ -1,0 +1,22 @@
+<view class="details">
+  <view class="head">
+    <view class="title">
+      【经典案例】{{intro.title}}
+    </view>
+    <view class="head_bottom">
+      <text class="head_time">{{intro.addtime}}</text>
+      来源：
+      <text class="head_source">{{intro.source}}</text>
+      | 作者：
+      <text class="head_writer">{{intro.author}}</text>
+    </view>
+  </view>
+  <!--内容  -->
+  <view class="centre">
+    <import src="../../wxParse/wxParse.wxml"/> 
+    <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>
+  
+  </view>
+</view>

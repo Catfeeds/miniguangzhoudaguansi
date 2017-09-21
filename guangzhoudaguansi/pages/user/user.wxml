@@ -1,0 +1,69 @@
+<view class="user">
+  <image src="{{userInfo.avatarUrl}}"></image>
+  <view class="user_name">{{userInfo.nickName}}</view>
+  <view class="user_phone">{{userinfo.tel}}</view>
+</view>
+<view class="message" bindtap="person" data-audit="{{userinfo.audit}}">
+  <view class="message_left">
+    <image src="../../image/10.png"></image>
+    <text>手机验证</text>
+  </view>
+  <view class="message_right">
+    <image src="../../image/05-1.png"></image>
+  </view>
+</view>
+<!--空  -->
+<view class="kong"></view>
+<navigator url="../personal/personal" class="message">
+  <view class="message_left">
+    <image src="../../image/ls.png"></image>
+    <text>律师认证</text>
+  </view>
+  <view class="message_right">
+    <image src="../../image/05-1.png"></image>
+  </view>
+</navigator>
+<!--空  -->
+<view style="height:1px;"></view>
+<navigator url="../myconsult/myconsult" class="message">
+  <view class="message_left">
+    <image src="../../image/12.png"></image>
+    <text>我的咨询</text>
+  </view>
+  <view class="message_right">
+    <image src="../../image/05-1.png"></image>
+  </view>
+</navigator>
+<view wx:if="{{userinfo.type==2}}">
+<view style="height:1px;"></view>
+<navigator url="../meconsult/meconsult" class="message">
+  <view class="message_left">
+    <image src="../../image/12.png"></image>
+    <text>已咨询我</text>
+  </view>
+  <view class="message_right">
+    <image src="../../image/05-1.png"></image>
+  </view>
+</navigator>
+</view>
+<!--空  -->
+<view style="height:1px;"></view>
+<view class="message" bindtap="call">
+  <view class="message_left">
+    <image src="../../image/11.png"></image>
+    <text>联系客服</text>
+  </view>
+  <view class="message_right">
+    {{tel}}
+  </view>
+</view>
+
+
+
+
+<!--logo  -->
+<!-- <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
+</view> -->
