@@ -56,13 +56,18 @@ class ConsultController extends PublicController {
         $add['ls_id'] = intval($_REQUEST['ls_id']);
         $add['addtime'] = time();
         if($dtype==2){
+            $audit = M('user')->where('id='.$uid)->getField('audit');
+            if(intval($audit)!=2){
+                echo json_encode(array('status'=>0,'err'=>'只有通过审核的律师才能发布服务！'));
+                exit();
+            }
             $add['status'] = 3;
             $add['ls_id'] = M('product')->where('uid='.$uid)->getField('id');
         }
        
         $res = M('consult')->add($add);
         if ($res) {
-            echo json_encode(array('status'=>1,'err'=>'提交成功'));
+            echo json_encode(array('status'=>1,'err'=>'提交成功!'));
             exit();
         }else{
             echo json_encode(array('status'=>0,'err'=>'提交失败！'));
