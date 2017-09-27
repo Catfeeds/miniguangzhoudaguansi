@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-09-21 16:13:27
+Date: 2017-09-26 17:46:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -68,14 +68,11 @@ CREATE TABLE `lr_case` (
   `addtime` varchar(255) DEFAULT NULL COMMENT '添加时间',
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0:不推荐;1:推荐',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lr_case
 -- ----------------------------
-INSERT INTO `lr_case` VALUES ('3', '打回访客户', '发过火锅就会加快大范甘迪', '地方个梵蒂冈和', '电饭锅烦得很发过火', '1505813114', '1');
-INSERT INTO `lr_case` VALUES ('2', '大师傅啊四方股份各回各家', '时代光华猴哥放大规划法规和回家就好看', '士大夫电饭锅地方很干净是', '速度地方', '1505812747', '1');
-INSERT INTO `lr_case` VALUES ('4', '电饭锅兔兔', '<span style=\"white-space:pre\">	</span>额外人委托合同规范64465467684<img src=\"/miniguangzhoudaguansi/Data/UploadFiles/Uploads/day_170919/201709191757224629.jpg\" alt=\"\" />', '发电公司的', '的风格大方', '1505813130', '1');
 
 -- ----------------------------
 -- Table structure for `lr_category`
@@ -3378,35 +3375,11 @@ CREATE TABLE `lr_consult` (
   `reply_content` text COMMENT '回复',
   `state` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1:未回复；2:已回复；3:服务中',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lr_consult
 -- ----------------------------
-INSERT INTO `lr_consult` VALUES ('6', '1', null, '11', '哈哈哈哈', '1', '1505805919', null, '1');
-INSERT INTO `lr_consult` VALUES ('2', '1', null, '11', '可以赢吗', '1', '1505802992', '可以', '2');
-INSERT INTO `lr_consult` VALUES ('3', '1', null, '0', '一定要赢', '1', '1505803260', '必须的', '2');
-INSERT INTO `lr_consult` VALUES ('4', '1', null, '0', '干死他', '1', '1505803278', '好好好', '2');
-INSERT INTO `lr_consult` VALUES ('5', '1', null, '8', '干死他', '1', '1505803308', null, '1');
-INSERT INTO `lr_consult` VALUES ('7', '1', null, '5', '嘻嘻嘻嘻嘻', '2', '1505805925', null, '3');
-INSERT INTO `lr_consult` VALUES ('8', '1', null, '5', '呵呵呵呵呵', '2', '1505805931', null, '3');
-INSERT INTO `lr_consult` VALUES ('9', '1', null, '5', '哦哦哦哦哦哦哦', '2', '1505805939', null, '3');
-INSERT INTO `lr_consult` VALUES ('10', '1', null, '5', '啪啪啪啪啪啪啪', '2', '1505805945', null, '3');
-INSERT INTO `lr_consult` VALUES ('11', '1', null, '11', '去去去去去', '2', '1505805950', null, '3');
-INSERT INTO `lr_consult` VALUES ('12', '1', null, '0', '日日日日日日', '2', '1505805956', null, '3');
-INSERT INTO `lr_consult` VALUES ('13', '1', null, '11', 'hahahaha', '2', '1505806756', null, '3');
-INSERT INTO `lr_consult` VALUES ('17', '1', null, '11', '13246', '1', '1505893036', '65432', '2');
-INSERT INTO `lr_consult` VALUES ('18', '1', null, '9', '嘎嘎嘎嘎嘎嘎嘎', '1', '1505972236', null, '1');
-INSERT INTO `lr_consult` VALUES ('19', '1', null, '0', '谁要帮忙', '2', '1505972305', null, '1');
-INSERT INTO `lr_consult` VALUES ('20', '1', null, '19', '实打实大师的', '1', '1505972318', null, '1');
-INSERT INTO `lr_consult` VALUES ('21', '1', null, '19', '大师傅', '1', '1505972839', null, '1');
-INSERT INTO `lr_consult` VALUES ('22', '1', null, '6', '5645', '1', '1505972981', null, '1');
-INSERT INTO `lr_consult` VALUES ('23', '1', null, '1', 'fdgdfgdfg', '1', '1505973400', null, '1');
-INSERT INTO `lr_consult` VALUES ('24', '1', null, '6', '465412', '1', '1505973474', null, '1');
-INSERT INTO `lr_consult` VALUES ('25', '1', null, '1', 'gdfgfg', '1', '1505973614', null, '1');
-INSERT INTO `lr_consult` VALUES ('26', '1', null, '11', '我帮你', '2', '1505974320', null, '1');
-INSERT INTO `lr_consult` VALUES ('27', '1', null, '0', '电饭锅', '1', '1505974395', null, '1');
-INSERT INTO `lr_consult` VALUES ('28', '1', null, '0', '多符合法规和', '1', '1505980549', '阿萨德', '2');
 
 -- ----------------------------
 -- Table structure for `lr_guanggao`
@@ -3503,15 +3476,12 @@ CREATE TABLE `lr_product` (
   `cz` varchar(255) DEFAULT NULL COMMENT '传真',
   `dizhi` varchar(255) DEFAULT NULL COMMENT '地址',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of lr_product
 -- ----------------------------
-INSERT INTO `lr_product` VALUES ('4', '0', '0', 'sdgg', '0.00', 'UploadFiles/product/20170919/1505788029391602.jpg', '', '', '1505788029', '1505890615', '12', '1239', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '15587456521', '', 'UploadFiles/product/20170919/1505788029261456.png', 'ty', 'sad', 'sddfsfdg', 'dfgfgh', '5435@qq.com', 'fddf');
-INSERT INTO `lr_product` VALUES ('5', '0', '0', 'LeeFon', '0.00', 'UploadFiles/product/20170919/1505789828418673.png', '', '', '1505789828', '1505791100', '54', '1333', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18845214487', '', 'UploadFiles/product/20170919/1505789828766870.jpg', '湛江律师所', '婚姻，暴力', '屌爆了', '毫无经验', '365354@qq.com', '湛江吴川');
-INSERT INTO `lr_product` VALUES ('6', '0', '0', '黄大状', '0.00', 'UploadFiles/product/20170919/1505790726112999.png', '', '', '1505790726', '1505791075', '0', '25', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18875451254', '', 'UploadFiles/product/20170919/1505790726387772.jpg', '上海律师所', '哈哈/嘻嘻/呵呵/噢噢', '哈哈哈哈哈哈哈哈', '嘻嘻嘻嘻嘻嘻爱茜茜', 'asdjh@163.com', '上海浦东');
-INSERT INTO `lr_product` VALUES ('11', '1', '0', '李锋', '0.00', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '', '', '1505957895', '1505963707', '0', '8', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18845236542', '', 'UploadFiles/bl_photo/20170920/1505887554668321.png', '湛江律师所', '抢劫/婚姻/凶杀', '我是一名大状', '毫无经验', '123@qq.com', '广东省湛江市吴川市吴阳镇');
+INSERT INTO `lr_product` VALUES ('2', '1', '0', '李锋', '0.00', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '', '', '1506416685', '1506418214', '0', '6', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18815465321', '', 'UploadFiles/bl_photo/20170920/1505887554668321.png', '湛江律师所', '抢劫/婚姻/凶杀', '       我是一名大状 哈哈哈哈爽肤水空间环境开始看风景还是空间的发挥技术风格是否会尽快回复说时代峻峰黑客技术货到付款就是啥都好反馈就是打回访客户是啥地方哈萨克交电话费实际到货付款是否世界东方航空是否闪电发货经营范围而发生尽快发货快速交电话费收到付款时间回复卡闪电发货是的客户反馈人员危机发生的纠纷和思考和地方就是东风科技收到付款计划网大是大非客家话实际到货付款时间恢复健康师傅。', '毫无经验', '123@qq.com', '广东省湛江市吴川市吴阳镇');
 
 -- ----------------------------
 -- Table structure for `lr_program`
@@ -3622,8 +3592,6 @@ CREATE TABLE `lr_shangchang` (
 -- ----------------------------
 -- Records of lr_shangchang
 -- ----------------------------
-INSERT INTO `lr_shangchang` VALUES ('1', '0', '广州律师所', 'LeeFon', 'UploadFiles/shop/logo/20170919/1505785688116007.jpg', 'UploadFiles/shop/20170919/1505785688287228.png', '2151', '2152', '2157', '棠下村', '广东省 广州市 天河区 棠下村', '0', '', '', '1505785688', '1505785688', '这是一个很好的律师所<img src=\"/miniguangzhoudaguansi/Data/UploadFiles/Uploads/day_170919/201709190948043150.jpg\" alt=\"\" />', null, '18845232547', '15578565421', '1', '1');
-INSERT INTO `lr_shangchang` VALUES ('2', '0', '香港律师所', '李芳芳', 'UploadFiles/shop/logo/20170919/1505786460517263.jpg', 'UploadFiles/shop/20170919/1505786460656224.png', '2451', '2458', '0', '', '海南省 三亚市  ', '0', '', '', '1505786460', '1505786460', '哈哈哈哈哈哈<img src=\"/miniguangzhoudaguansi/Data/UploadFiles/Uploads/day_170919/201709191000577157.jpg\" alt=\"\" />', null, '02012457898', '18856320102', '1', '1');
 
 -- ----------------------------
 -- Table structure for `lr_sms_log`
@@ -3698,7 +3666,7 @@ CREATE TABLE `lr_user` (
 -- ----------------------------
 -- Records of lr_user
 -- ----------------------------
-INSERT INTO `lr_user` VALUES ('1', 'LeeFon', 'LeeFon', '李锋', '', '1505727507', 'http://wx.qlogo.cn/mmhead/FFowRyeQrWia2HqZBUeR2RPEEYIEBmI0GU91BKJ3HzmA/132', '18815465321', '1', '0', 'undefined', 'wx', '2', null, 'UploadFiles/bl_photo/20170920/1505887554668321.png', '2', '', '湛江律师所', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '广东省湛江市吴川市吴阳镇', '抢劫/婚姻/凶杀', '123@qq.com', '我是一名大状', '毫无经验');
+INSERT INTO `lr_user` VALUES ('1', 'LeeFon', 'LeeFon', '李锋', '', '1505727507', 'http://wx.qlogo.cn/mmhead/FFowRyeQrWia2HqZBUeR2RPEEYIEBmI0GU91BKJ3HzmA/132', '18815465321', '1', '0', 'undefined', 'wx', '2', null, 'UploadFiles/bl_photo/20170920/1505887554668321.png', '2', '', '湛江律师所', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '广东省湛江市吴川市吴阳镇', '抢劫/婚姻/凶杀', '123@qq.com', '我是一名大状 哈哈哈哈', '毫无经验');
 
 -- ----------------------------
 -- Table structure for `lr_web`

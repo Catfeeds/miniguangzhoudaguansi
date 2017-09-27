@@ -1,7 +1,7 @@
 <view class="user">
   <image src="{{userInfo.avatarUrl}}"></image>
   <view class="user_name">{{userInfo.nickName}}</view>
-  <view class="user_phone">{{userinfo.tel}}</view>
+  <view class="user_phone">{{userinfo.tel != null?userinfo.tel:''}}</view>
 </view>
 <view class="message" bindtap="person" data-audit="{{userinfo.audit}}">
   <view class="message_left">
@@ -34,7 +34,7 @@
     <image src="../../image/05-1.png"></image>
   </view>
 </navigator>
-<view wx:if="{{userinfo.type==2}}">
+<view wx:if="{{userinfo.audit>1}}">
 <view style="height:1px;"></view>
 <navigator url="../meconsult/meconsult" class="message">
   <view class="message_left">

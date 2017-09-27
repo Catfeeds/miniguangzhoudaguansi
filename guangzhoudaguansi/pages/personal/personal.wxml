@@ -5,7 +5,7 @@
  <text wx:elif="{{audit==1}}" style="color:red;">审核中</text>
  <text wx:elif="{{audit==2}}" style="color:green;">已认证</text>
  <text wx:elif="{{audit==3}}" style="color:red;">未通过</text>
- <view>(理由/原因: )</view>
+  <view>(理由/原因: )</view> 
 </view>
     <view class="user">
         <text style="color:#000">姓名：</text>

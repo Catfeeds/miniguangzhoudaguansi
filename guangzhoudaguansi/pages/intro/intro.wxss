@@ -58,6 +58,8 @@ page {
 }
  .intro_centre {
   margin-top: 20rpx;
+  line-height:40rpx;
+   text-indent:2em;
 } 
 .bottom_nav {
   display: flex;

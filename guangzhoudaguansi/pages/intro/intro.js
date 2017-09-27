@@ -7,12 +7,13 @@ Page({
     userInfo: {},
     number:"10086",
     ls_id:0,
-    intro:''
+    intro:'',
+    tel:''
   },
   dial:function () {
     var that = this;
     wx.makePhoneCall({
-      phoneNumber: that.data.number
+      phoneNumber: that.data.tel
     })
   },
   shouye:function() {
@@ -52,7 +53,8 @@ Page({
         var status = res.data.status;
         if (status == 1) {
           that.setData({
-            intro:res.data.info
+            intro:res.data.info,
+            tel:res.data.info.tel
           });
           wx.setNavigationBarTitle({
             title: res.data.info.name

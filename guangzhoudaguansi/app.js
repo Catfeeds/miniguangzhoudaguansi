@@ -5,8 +5,8 @@ App({
     userType: 1,
     appId: "",
     appKey: "",
-    // hostUrl: 'https://gzleren.com/minilegaladvice/index.php',
-    hostUrl: 'http://127.0.0.1/miniguangzhoudaguansi/index.php',
+    hostUrl: 'https://gzleren.com/miniguangzhoudaguansi/index.php',
+    // hostUrl: 'http://127.0.0.1/miniguangzhoudaguansi/index.php',
   },
   onLaunch: function () {
     //调用API从本地缓存中获取数据

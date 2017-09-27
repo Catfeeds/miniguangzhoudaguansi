@@ -116,7 +116,7 @@ class ConsultController extends PublicController {
             echo json_encode(array('status'=>1,'list'=>$list));
             exit();
         }else{
-            echo json_encode(array('status'=>0,'err'=>'网络错误！'));
+            echo json_encode(array('status'=>0,'err'=>'没有数据！'));
             exit();
         }
         
