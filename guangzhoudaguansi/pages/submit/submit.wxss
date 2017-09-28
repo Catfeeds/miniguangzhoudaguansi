@@ -22,6 +22,17 @@ page {
   padding: 0 30rpx;
   margin-top: 50rpx;
 }
+.fenlei button {
+  /* background: #336598; */
+  color: #000;
+  font-size:29rpx;
+  margin-bottom:20rpx;
+
+}
+.fenlei {
+  padding: 0 30rpx;
+  margin-top: 50rpx;
+}
 .shouye  {
   padding: 30rpx;
 }

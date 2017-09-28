@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2017-09-26 17:46:51
+Date: 2017-09-28 15:18:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,17 +62,18 @@ DROP TABLE IF EXISTS `lr_case`;
 CREATE TABLE `lr_case` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '案例分析表',
   `title` varchar(255) NOT NULL COMMENT '标题',
-  `content` varchar(255) DEFAULT NULL COMMENT '案例内容',
+  `content` text COMMENT '案例内容',
   `source` varchar(255) DEFAULT NULL COMMENT '来源',
   `author` varchar(255) DEFAULT NULL COMMENT '作者',
   `addtime` varchar(255) DEFAULT NULL COMMENT '添加时间',
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0:不推荐;1:推荐',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lr_case
 -- ----------------------------
+INSERT INTO `lr_case` VALUES ('1', '哈哈哈哈哈', '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈', '哈哈哈哈哈哈哈', '哈哈哈哈哈哈哈哈', '1506558732', '1');
 
 -- ----------------------------
 -- Table structure for `lr_category`
@@ -3367,6 +3368,7 @@ DROP TABLE IF EXISTS `lr_consult`;
 CREATE TABLE `lr_consult` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '咨询服务表',
   `uid` int(11) NOT NULL COMMENT '用户ID',
+  `cid` int(11) DEFAULT NULL COMMENT '分类ID',
   `tel` varchar(255) DEFAULT NULL COMMENT '电话',
   `ls_id` int(11) DEFAULT NULL COMMENT '律师ID',
   `content` text COMMENT '咨询服务内容',
@@ -3375,11 +3377,15 @@ CREATE TABLE `lr_consult` (
   `reply_content` text COMMENT '回复',
   `state` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1:未回复；2:已回复；3:服务中',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lr_consult
 -- ----------------------------
+INSERT INTO `lr_consult` VALUES ('2', '1', '4', null, '0', '杀杀杀', '1', '1506580486', null, '1');
+INSERT INTO `lr_consult` VALUES ('3', '1', '5', null, '0', '快乐齐天', '1', '1506580755', null, '1');
+INSERT INTO `lr_consult` VALUES ('4', '1', '4', null, '0', '嘻嘻嘻嘻', '1', '1506581072', null, '1');
+INSERT INTO `lr_consult` VALUES ('5', '1', '2', null, '0', '我要离婚', '1', '1506582129', null, '1');
 
 -- ----------------------------
 -- Table structure for `lr_guanggao`
@@ -3400,6 +3406,26 @@ CREATE TABLE `lr_guanggao` (
 -- ----------------------------
 -- Records of lr_guanggao
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `lr_legal`
+-- ----------------------------
+DROP TABLE IF EXISTS `lr_legal`;
+CREATE TABLE `lr_legal` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '法律常识表',
+  `title` varchar(255) NOT NULL COMMENT '标题',
+  `content` text COMMENT '内容',
+  `source` varchar(255) DEFAULT NULL COMMENT '来源',
+  `author` varchar(255) DEFAULT NULL COMMENT '作者',
+  `addtime` varchar(255) DEFAULT NULL COMMENT '添加时间',
+  `type` tinyint(4) DEFAULT '0' COMMENT '0:不推荐；1:推荐',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of lr_legal
+-- ----------------------------
+INSERT INTO `lr_legal` VALUES ('1', '嘻嘻嘻嘻嘻嘻', '嘻嘻嘻嘻嘻嘻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻寻', '信息', '嘻嘻嘻', '1506559671', '1');
 
 -- ----------------------------
 -- Table structure for `lr_news`
@@ -3481,7 +3507,7 @@ CREATE TABLE `lr_product` (
 -- ----------------------------
 -- Records of lr_product
 -- ----------------------------
-INSERT INTO `lr_product` VALUES ('2', '1', '0', '李锋', '0.00', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '', '', '1506416685', '1506418214', '0', '6', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18815465321', '', 'UploadFiles/bl_photo/20170920/1505887554668321.png', '湛江律师所', '抢劫/婚姻/凶杀', '       我是一名大状 哈哈哈哈爽肤水空间环境开始看风景还是空间的发挥技术风格是否会尽快回复说时代峻峰黑客技术货到付款就是啥都好反馈就是打回访客户是啥地方哈萨克交电话费实际到货付款是否世界东方航空是否闪电发货经营范围而发生尽快发货快速交电话费收到付款时间回复卡闪电发货是的客户反馈人员危机发生的纠纷和思考和地方就是东风科技收到付款计划网大是大非客家话实际到货付款时间恢复健康师傅。', '毫无经验', '123@qq.com', '广东省湛江市吴川市吴阳镇');
+INSERT INTO `lr_product` VALUES ('2', '1', '0', '李锋', '0.00', 'UploadFiles/ls_photo/20170921/1505955894125864.png', '', '', '1506416685', '1506418214', '0', '12', '1', '0', '0', '0', '1', '0', '0', '', '', '0', '18815465321', '', 'UploadFiles/bl_photo/20170920/1505887554668321.png', '湛江律师所', '抢劫/婚姻/凶杀', '       我是一名大状 哈哈哈哈爽肤水空间环境开始看风景还是空间的发挥技术风格是否会尽快回复说时代峻峰黑客技术货到付款就是啥都好反馈就是打回访客户是啥地方哈萨克交电话费实际到货付款是否世界东方航空是否闪电发货经营范围而发生尽快发货快速交电话费收到付款时间回复卡闪电发货是的客户反馈人员危机发生的纠纷和思考和地方就是东风科技收到付款计划网大是大非客家话实际到货付款时间恢复健康师傅。', '毫无经验', '123@qq.com', '广东省湛江市吴川市吴阳镇');
 
 -- ----------------------------
 -- Table structure for `lr_program`
@@ -3688,3 +3714,26 @@ CREATE TABLE `lr_web` (
 -- ----------------------------
 INSERT INTO `lr_web` VALUES ('1', '0', '关于我们', '', '0', '<p><span style=\"font-family:宋体;font-size: 14px; line-height: 24px; text-indent: 30px;\"></span></p><span style=\"font-family:宋体;\"><span style=\"font-size:16px;\"></span></span><p><span style=\"font-family:宋体;line-height: 24px;\"><span style=\"font-size:16px;\">关于我们<br /></span></span></p><p style=\"text-indent: 30px;\"><span style=\"font-family:宋体;\"><span style=\"font-size: 14px;\">&nbsp;</span></span></p>', '1493257518');
 INSERT INTO `lr_web` VALUES ('2', '0', '联系我们', '', '0', '联系我们<br />', '1493257505');
+
+-- ----------------------------
+-- Table structure for `lr_zicate`
+-- ----------------------------
+DROP TABLE IF EXISTS `lr_zicate`;
+CREATE TABLE `lr_zicate` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL COMMENT '分类名称',
+  `photo_x` varchar(255) DEFAULT NULL COMMENT '图标',
+  `addtime` varchar(255) NOT NULL COMMENT '添加时间',
+  `type` tinyint(4) DEFAULT '0' COMMENT '0:不推荐；1:推荐',
+  `sort` tinyint(4) NOT NULL DEFAULT '0' COMMENT '排序',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of lr_zicate
+-- ----------------------------
+INSERT INTO `lr_zicate` VALUES ('1', '打架', 'UploadFiles/zicate/20170928/1506562253520112.jpg', '1506561932', '1', '2');
+INSERT INTO `lr_zicate` VALUES ('2', '婚姻', 'UploadFiles/zicate/20170928/1506562315995607.png', '1506562315', '1', '0');
+INSERT INTO `lr_zicate` VALUES ('3', '杀人', 'UploadFiles/zicate/20170928/1506562386712561.jpg', '1506562386', '1', '0');
+INSERT INTO `lr_zicate` VALUES ('4', '犯罪', 'UploadFiles/zicate/20170928/1506564702137389.jpg', '1506564702', '1', '0');
+INSERT INTO `lr_zicate` VALUES ('5', '吸毒', 'UploadFiles/zicate/20170928/1506564717431984.jpg', '1506564717', '1', '0');

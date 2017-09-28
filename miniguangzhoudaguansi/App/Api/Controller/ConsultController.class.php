@@ -15,7 +15,7 @@ class ConsultController extends PublicController {
         if(intval($_REQUEST['ls_id'])){
             $tmp_id = M('product')->where('id='.intval($_REQUEST['ls_id']))->getField('uid');
             if($uid==intval($tmp_id)){
-                 echo json_encode(array('status'=>0,'err'=>'不能咨询自己!'));
+                echo json_encode(array('status'=>0,'err'=>'不能咨询自己!'));
                 exit();
             }
            
@@ -26,6 +26,16 @@ class ConsultController extends PublicController {
             exit();
         }
 
+        $catName = trim($_REQUEST['catName']);
+        if(!$catName){
+            echo json_encode(array('status'=>0,'err'=>'请选择分类!'));
+            exit(); 
+        }
+        $cid = intval(M('zicate')->where('name="'.$catName.'"')->getField('id'));
+        if(!$cid){
+            echo json_encode(array('status'=>0,'err'=>'请选择分类!'));
+            exit();
+        }
         $content = trim($_POST['content']);
         if (!$content) {
             echo json_encode(array('status'=>0,'err'=>'请输入内容.'));
@@ -55,6 +65,7 @@ class ConsultController extends PublicController {
         $add['type'] = $dtype;
         $add['ls_id'] = intval($_REQUEST['ls_id']);
         $add['addtime'] = time();
+        $add['cid'] = $cid;
         if($dtype==2){
             $audit = M('user')->where('id='.$uid)->getField('audit');
             if(intval($audit)!=2){
@@ -63,6 +74,7 @@ class ConsultController extends PublicController {
             }
             $add['status'] = 3;
             $add['ls_id'] = M('product')->where('uid='.$uid)->getField('id');
+            $add['cid'] = 0;
         }
        
         $res = M('consult')->add($add);
@@ -89,7 +101,7 @@ class ConsultController extends PublicController {
             echo json_encode(array('status'=>1,'info'=>$res));
             exit();
         }else{
-            echo json_encode(array('status'=>0,'err'=>'信息错误！'));
+            echo json_encode(array('status'=>0,'err'=>'暂无数据！'));
             exit();
         }
 
@@ -116,7 +128,7 @@ class ConsultController extends PublicController {
             echo json_encode(array('status'=>1,'list'=>$list));
             exit();
         }else{
-            echo json_encode(array('status'=>0,'err'=>'没有数据！'));
+            echo json_encode(array('status'=>0,'err'=>'网络错误！'));
             exit();
         }
         
@@ -178,6 +190,50 @@ class ConsultController extends PublicController {
             exit();
         }
         
+    }
+
+    //咨询列表
+    public function zilist(){
+        $cid = intval($_REQUEST['cid']);
+        $res = M('consult')->where('cid='.$cid)->select();
+        if ($res) {
+            foreach($res as $k => $v){
+                $res[$k]['addtime'] = date("Y-m-d H:i:s",$v['addtime']);
+                $res[$k]['type'] = M('user')->where('id='.intval($v['uid']))->getField('type');
+                $res[$k]['name'] = M('user')->where('id='.intval($v['uid']))->getField('truename');
+                if($res[$k]['name']==''){
+                    $res[$k]['name'] = M('user')->where('id='.intval($v['uid']))->getField('uname');
+                }
+            }
+            
+            echo json_encode(array('status'=>1,'info'=>$res));
+            exit();
+        }else{
+            echo json_encode(array('status'=>0,'err'=>'暂无数据！'));
+            exit();
+        }
+
+    }
+
+     //分类列表
+    public function cate_list(){
+        $catList = M('zicate')->select();
+        if($catList){
+            foreach($catList as $k => $v){
+                $catList[$k]['photo_x'] = __DATAURL__.$v['photo_x'];
+            }
+        }
+        $temp_list = M('zicate')->field('name')->select();
+        $catList2 = array();
+        if($temp_list){
+            foreach($temp_list as $k => $v){
+                $catList2[$k] = $v['name'];
+            }
+        }
+        
+        echo json_encode(array('status'=>1,'catList'=>$catList,'catList2'=>$catList2));
+        exit();
+
     }
 
 }

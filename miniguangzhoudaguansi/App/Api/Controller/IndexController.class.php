@@ -15,18 +15,10 @@ class IndexController extends PublicController {
 		// }
     	/***********获取首页顶部轮播图 end************/
 
-        //============================
-        //首页推荐律师事务所8个
-        //============================
-        $shop_list = M('shangchang')->where('status=1 AND type=1')->order('sort asc')->field('id,name,logo')->limit(8)->select();
-        foreach ($shop_list as $k => $v) {
-            $shop_list[$k]['logo'] = __DATAURL__.$v['logo'];
-        }
-
     	//======================
     	//首页推荐律师
     	//======================
-    	$pro_list = M('product')->where('del=0 AND type=1')->order('sort asc,id desc')->select();
+    	$pro_list = M('product')->where('del=0 AND type=1')->order('sort asc,id desc')->limit(4)->select();
     	foreach ($pro_list as $k => $v) {
     		$pro_list[$k]['photo_x'] = __DATAURL__.$v['photo_x'];
     	}
@@ -58,6 +50,14 @@ class IndexController extends PublicController {
             }
         }
 
+        //咨询分类
+        $zicate = M('zicate')->where('type=1')->select();
+        if($zicate){
+            foreach($zicate as $k => $v){
+                $zicate[$k]['photo_x'] = __DATAURL__.$v['photo_x'];
+            }
+        }
+
         //案例
         $anli = M('case')->where('type=1')->select();
         if($anli){
@@ -66,9 +66,17 @@ class IndexController extends PublicController {
             }
         }
 
+        //法律常识
+        $legal = M('legal')->where('type=1')->select();
+        if($legal){
+            foreach($legal as $k => $v){
+                $legal[$k]['addtime'] = date("Y-m-d",$v['addtime']);
+            }
+        }
+
         //客服电话
         $tel = M('program')->limit(1)->getField('tel');
-    	echo json_encode(array('lslist'=>$pro_list,'shop'=>$shop_list,'zixun'=>$zixun,'fuwu'=>$fuwu,'tel'=>$tel,'anli'=>$anli));
+    	echo json_encode(array('lslist'=>$pro_list,'zicate'=>$zicate,'zixun'=>$zixun,'fuwu'=>$fuwu,'tel'=>$tel,'anli'=>$anli,'legal'=>$legal));
     	exit();
     }
 

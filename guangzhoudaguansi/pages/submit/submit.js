@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ls_id:0
+    ls_id:0,
+    catList: [],
+    catList2:[],
+    catName:''
   },
   return:function() {
     wx.switchTab({
@@ -22,17 +25,37 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.ls_id)
+    var that = this;
     var ls_id = options.ls_id;
     if(ls_id != undefined && ls_id != ''){
       this.setData({
         ls_id: ls_id
       });
     };
-    console.log(this.data.ls_id)
+    wx.request({
+      url: app.pubData.hostUrl + '/Api/Consult/cate_list',
+      method: 'post',
+      data: {},
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res.data.catList2)
+          that.setData({
+            catList: res.data.catList,
+            catList2: res.data.catList2,
+          });
+      },
+      fail: function (e) {
+        wx.showToast({
+          title: '网络异常！',
+          duration: 2000
+        });
+      },
+    })
    
   },
-
+  
   bindFormSubmit:function (e) {
     var fdata = e.detail.value;
     var content = fdata.content;
@@ -43,6 +66,7 @@ Page({
       data: { 
         ls_id: that.data.ls_id,
         uid: app.pubData.userId,
+        catName:that.data.catName,
         dtype:1,
         content:content
         },
@@ -70,6 +94,14 @@ Page({
           duration: 2000
         });
       },
+    })
+  },
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    var catName = this.data.catList2[e.detail.value];
+    this.setData({
+      index: e.detail.value,
+      catName: catName
     })
   },
 

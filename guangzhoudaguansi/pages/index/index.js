@@ -13,10 +13,11 @@ Page({
     tap1:0,
     caseData:false,
     hotData:true,
-    shopList:[],
+    zicate:[],
     lslist:[],
     zixun:[],
-    fuwu:[],
+    fuwu: [],
+    legal:[],
     anli:[],
     zpage:1,
     fpage:1
@@ -368,7 +369,7 @@ Page({
       success: function (res) {
         console.log(res)
         var ggtop = res.data.ggtop;
-        var shop = res.data.shop;
+        var zicate = res.data.zicate;
         var prolist = res.data.prolist;
         var news = res.data.news;
         var gong = res.data.gong;
@@ -379,10 +380,11 @@ Page({
         var zixun = res.data.zixun;
         var fuwu = res.data.fuwu;
         var anli = res.data.anli;
+        var legal = res.data.legal;
         //that.initProductData(data);
         that.setData({
           imgUrls: ggtop,
-          shop: shop,
+          zicate: zicate,
           productData: prolist,
           news: news,
           gong: gong,
@@ -392,7 +394,8 @@ Page({
           lslist:lslist,
           zixun:zixun,
           fuwu:fuwu,
-          anli:anli
+          anli:anli,
+          legal:legal
         });
         //endInitData
       },
@@ -514,10 +517,10 @@ Page({
     this.initIndexData();
   },
 
-  gotoshop:function (e) {
-    var shopId = e.currentTarget.dataset.id;
+  zilist:function (e) {
+    var cid = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../synopsis/synopsis?shopId='+shopId,
+      url: '../zilist/zilist?cid='+cid,
     })
   },
 

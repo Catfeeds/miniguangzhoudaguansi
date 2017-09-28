@@ -13,22 +13,21 @@
       热门咨询
     </view>
     <view class="tap_case {{tap == 1?'active':''}}"id="1">
-      案例分析
+      法律常识
     </view> 
   </view>
   <!--热门咨询-数据   -->
   <view class="hot_data" wx:if="{{hotData}}" >
     <view class="hot_information">
-      <view class="hot_message" wx:for="{{shopList}}" bindtap="gotoshop" data-id="{{item.id}}">
-        <image src="{{item.logo}}"></image>
+      <view class="hot_message" wx:for="{{zicate}}" bindtap="zilist" data-id="{{item.id}}">
+        <image src="{{item.photo_x}}"></image>
         <view>{{item.name}}</view>
       </view>
     </view>
     <!--空白  -->
     <view class="blank"></view>
-<!--推荐律师  -->
-    <view class="recommend">
-      <view class="recommend_nav">
+    <!--律师推荐  -->
+    <view class="recommend_nav">
         <text>推荐律师</text>
         <view>
 
@@ -50,6 +49,30 @@
           <button>咨询TA</button>
         </view>
       </view>
+<!--推荐律师  -->
+    <view class="recommend">
+      <!-- <view class="recommend_nav">
+        <text>推荐律师</text>
+        <view>
+
+          <text bindtap="moreLs">更多推荐律师</text>
+          <image src="../../image/05.png"></image>
+        </view>
+        
+      </view>
+      <view class="recommend_big" wx:for="{{lslist}}">
+        <view class="recommend_img">
+          <image src="{{item.photo_x}}"></image>
+        </view>
+        <view class="recommend_text">
+          <text>{{item.name}}</text>
+          <text class="color">{{item.dizhi!=null?item.dizhi:''}}</text>
+          <text class="color">{{item.service!=null?item.service:''}}</text>
+        </view>
+        <view class="recommend_button" bindtap="intro" data-id="{{item.id}}">
+          <button>咨询TA</button>
+        </view>
+      </view> -->
       <!-- recommend end -->
     </view>
     <!--空白  -->
@@ -132,18 +155,44 @@
     <view class="blank"></view>
 <!--hot_data end  -->
   </view>
-  <!--案例分析-数据  -->
+  <!--法律常识-数据  -->
   <view class="case_data" wx:if="{{caseData}}">
-    <navigator url="../advisoryDetails/advisoryDetails?id={{item.id}}"  wx:for="{{anli}}">
+    <navigator url="../legal/legal?id={{item.id}}"  wx:for="{{legal}}">
       <view class="case_row">
         <view class="case_text">
-          <text>【经典案例】</text>{{item.title}}
+          {{item.title}}
         </view>
         <view class="case_time">
           <text>{{item.addtime}}</text>
         </view>
       </view>
     </navigator>
+    
+    <!--空白  -->
+    <view class="blank"></view>
+    <!--律师推荐  -->
+    <view class="recommend_nav">
+        <text>推荐律师</text>
+        <view>
+
+          <text bindtap="moreLs">更多推荐律师</text>
+          <image src="../../image/05.png"></image>
+        </view>
+        
+      </view>
+      <view class="recommend_big" wx:for="{{lslist}}">
+        <view class="recommend_img">
+          <image src="{{item.photo_x}}"></image>
+        </view>
+        <view class="recommend_text">
+          <text>{{item.name}}</text>
+          <text class="color">{{item.dizhi!=null?item.dizhi:''}}</text>
+          <text class="color">{{item.service!=null?item.service:''}}</text>
+        </view>
+        <view class="recommend_button" bindtap="intro" data-id="{{item.id}}">
+          <button>咨询TA</button>
+        </view>
+      </view>
   <!--case_data end  -->
   </view>
 
@@ -151,9 +200,9 @@
 <!--home_page end  -->
 </view>
 <!--logo  -->
-<view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+<!-- <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
   <image src="http://www.gzleren.com/website/img/logo/logo.png" style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
   <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
   <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁科技</view>
   <image src="../../image/wechat.png" style="width:200rpx;height:200rpx;margin-top:50rpx;"></image>
-</view>
+</view> -->
